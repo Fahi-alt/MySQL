@@ -28,3 +28,5 @@ INSERT INTO Student_Table (STUDENT_ID, FIRST_NAME, LAST_NAME, GPA, ENROLLMENT_DA
 -- Select and display the first 3 characters of each student's first name
 SELECT SUBSTRING(FIRST_NAME, 1, 3) AS first_three_chars
 FROM Student_Table;
+
+![first 3 characters of each student's first name](Images/question_3.png)
