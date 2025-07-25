@@ -1,0 +1,30 @@
+-- Create a new database named 'Student_INFO'
+CREATE DATABASE Student_INFO;
+
+-- Switch to the newly created database
+USE Student_INFO;
+
+-- Create a table named 'Student_Table' with the specified columns and data types
+CREATE TABLE Student_Table (
+    STUDENT_ID INT PRIMARY KEY,            -- Unique student ID (Primary Key)
+    FIRST_NAME VARCHAR(50),                -- First name of the student
+    LAST_NAME VARCHAR(50),                 -- Last name of the student
+    GPA DECIMAL(3, 2),                     -- GPA (up to 9.99, with 2 decimal places)
+    ENROLLMENT_DATE DATETIME,              -- Enrollment date and time
+    MAJOR VARCHAR(50)                      -- Major subject
+);
+
+-- Insert multiple records into the 'Student_Table'
+INSERT INTO Student_Table (STUDENT_ID, FIRST_NAME, LAST_NAME, GPA, ENROLLMENT_DATE, MAJOR) VALUES
+(201, 'Shivansh', 'Mahajan', 8.79, '2021-09-01 09:30:00', 'Computer Science'),
+(202, 'Umesh', 'Sharma', 8.44, '2021-09-01 08:30:00', 'Mathematics'),
+(203, 'Rakesh', 'Kumar', 5.6, '2021-09-01 10:00:00', 'Biology'),
+(204, 'Radha', 'Sharma', 9.2, '2021-09-01 12:45:00', 'Chemistry'),
+(205, 'Kush', 'Kumar', 7.85, '2021-09-01 08:30:00', 'Physics'),
+(206, 'Prem', 'Chopra', 9.56, '2021-09-01 09:24:00', 'History'),
+(207, 'Pankaj', 'Vats', 9.78, '2021-09-01 02:30:00', 'English'),
+(208, 'Navleen', 'Kaur', 7, '2021-09-01 06:30:00', 'Mathematics');
+
+
+SELECT REPLACE(FIRST_NAME, 'a', 'A') AS modified_first_name
+FROM Student_Table;
